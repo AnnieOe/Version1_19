@@ -1,16 +1,17 @@
 <?php
 ob_start(); // Turn on output buffering:
 
-/* File Name: user_home.php
+/*File Name: user_home.php
 
-  Version 1_19
-  CSC 478 Group Project
-  Group: FanSports
-  Wesley Elliot, Jeremy Jones, Ann Oesterle
-  Last Updated: 10/17/2016 */
+Version 1.0
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 10/25/2016 by Annie Oesterle
+*/
 
 define('TITLE', 'User Home');
-define('CSS', 'uhomestyle');
+define('CSS', 'dashboardstyle');
 include('templates/header.php'); // Include the header.
 ?>
 <!-- BEGIN CHANGEABLE CONTENT. -->
@@ -19,7 +20,7 @@ include('templates/header.php'); // Include the header.
 
     <!--Top of the card, contains the user profile-->
     <div class ="userProfile">
-
+<!--Greet User with custom greeting-->
         <?php
         if (!isset($_SESSION['loggedin'])) {
             print '<h1 class ="userWelcome">Welcome</h1>';
@@ -28,21 +29,21 @@ include('templates/header.php'); // Include the header.
             print "<h1 class ='userWelcome'>Hello, $name</h1>";
         }
         ?>
-
     </div><!--End userProfile div-->
+    
     <!--Middle of the card, contains the info about any leagues the user is in-->
+    
     <div class ="currentLeagues">
+      <h1 class = "myLeagues_title">Current Leagues</h1>
         <table class ="myLeagues">
-            <tr class = "Leaguetitle">
-                <td align = "center" colspan = "4" >Current Leagues</td>
+            <tr class = "myLeagues_categories">
+                <th  class = "myLeagues_categories">League Name</td>
+                <th  class = "myLeagues_categories">Team Name</td>
+                <th  class = "myLeagues_categories">Status</td>
             </tr>
-            <!--<tr class ="spacer"></tr>-->
-            <tr class = "categories">
-                <td >League Name</td>
-                <td >Team Name</td>
-                <td >Status</td>
-            </tr>
-            <tr class = "leagueData" id = "leagueData">
+<!----------TO DO: CLick on the row will take user to league info page for that league------------------>
+<!----------TO DO V 2.0: Have a Row for every league the user is a part of------------------>
+            <tr class = "myLeagues_data" id = "leagueData">
                 <?php
                 // Create connection
                 
@@ -62,7 +63,7 @@ include('templates/header.php'); // Include the header.
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while ($row = $result->fetch_assoc()) {
-                        print '<td>' . $row['leagueName'] . '</td><td>' . $row['teamName'] . '</td><td>' . $row['teamStatus'] . '</td></tr>';
+                        print '<td id = "leagueData">' . $row['leagueName'] . '</td><td id = "leagueData">' . $row['teamName'] . '</td><td id = "leagueData">' . $row['teamStatus'] . '</td></tr>';
                     }
                 } else {
                     print '<td class = "leagueEmpty" id = "leagueEmpty">Join a League!</td>';
@@ -70,14 +71,10 @@ include('templates/header.php'); // Include the header.
                 $conn->close();
                 ?>
         </table>
+    <div class = "createLeague" id = "createLeague">Create a League</div>
+    <div class = "joinLeague" id = "joinLeague">Join a League</div>
+    
     </div><!-- End currentLeague div  -->
-    <!--Bottom of card, contains buttons for joining or creating a league-->
-    <table class = "addLeague">
-        <tr class ="addLeague" id = "addLeague">
-            <td class = "createLeague" id = "createLeague">Create a League</td>
-            <td class = "joinLeague" id = "joinLeague">Join a League</td>
-        </tr>
-    </table
 
 </div><!-- End userCard div  -->
 

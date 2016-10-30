@@ -1,14 +1,13 @@
 <?php
 ob_start(); // Turn on output buffering:
+/*File Name: logout.php
 
-/* File Name: logout.php
-
-  Version 1_18
-  CSC 478 Group Project
-  Group: FanSports
-  Wesley Elliot, Jeremy Jones, Ann Oesterle
-  Last Updated: 10/15/2016 */
-
+Version 1.0
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 10/25/2016 by Annie Oesterle
+*/
 define('TITLE', 'Logout');
 define('CSS', 'formstyle');
 include('templates/header.php'); // Include the header.
@@ -24,14 +23,7 @@ session_destroy();
 $_SESSION['loggedin'] = NULL;//make sure the user is logged out
 $session = $_SESSION['loggedin'];
 
-//if (ob_get_contents()) ob_end_clean(); //clean buffer
-
-//header('Location: user_home.php'); //once logged in, redirect to user home
-
-//
-//FIX THIS LATER: logging out works, but need to reprint header template in order to get logo to take you to correct place
-//FIX THIS LATER: logging out clears session but clicking on logo still takes you to user_home, although at user_home $_SESSION['loggedin'] = NULL;/ 
-//
+//Possibly change this later
 //print the html code
 print "Session: $session";
 print '

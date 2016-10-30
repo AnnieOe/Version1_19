@@ -16,17 +16,18 @@ function init() {
     U.$('joinLeague').onclick = function () {
         location.href = "join.php";
     };
-    U.$('leagueData').onclick = function () {
-        location.href = "league_info.php";
-    };
+    U.addEvent(U.$('leagueData'), 'click', toleague);
+    
     U.addEvent(U.$('plusLeague'), 'mouseover', show);
 }
+function toleague(){
+  location.href = "league_info.php";
+  }
 function show() {
     U.$('cjLeague').style.display = "table-row";
     U.$('bottom-card').style.display = "table-row";
 }
 function hide() {
     U.$('cjLeague').style.display = "none";
-//    U.$('bottom-card').style.display = "none";
 }
 

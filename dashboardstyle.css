@@ -1,0 +1,309 @@
+/*File Name: uhomestyle.css
+
+Version 1.0
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 10/25/2016 by Annie Oesterle
+*/
+
+/*    Design Notes:
+Main Blue: #112B6D
+Accent Blue: #3665DB
+Dark Grey Accent: #2c313e
+Light Grey Accent:#f8f9fa
+Orange:#fc850f
+Yellow: 
+#f0d023
+*/
+
+
+html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+
+  font-family: "Arial", Helvetica, sans-serif;
+
+  background-color: black;
+}
+body{
+  margin:0;
+  padding:0;
+}
+/******Begin Vertical header******/
+header{ 
+  margin:1%;
+  padding:0px;
+  max-height:100vh;
+  height:100%;
+  width: 15%;
+  display:inline-block;
+  position:fixed;
+  background-color: #000000;
+
+}
+
+/* div verticalHeader_top contains logo, logout and home links*/
+div.verticalHeader_top{
+  display:inline-block;
+}
+img.logo{
+  height:auto;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  text-align:center;
+  vertical-align:top;
+  display:inline;
+
+}
+p.homeLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:20px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.homeLink:hover{
+  cursor:pointer;
+}
+p.logoutLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:10px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.logoutLink:hover{
+  cursor:pointer;
+}
+
+/*bottom div, contains general information about app*/
+div.verticalHeader_info{
+  text-align:center;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  color:#f8f9fa;
+  margin:0px;
+  margin-bottom:10%;
+  padding:0px;
+}
+a.license{
+  color: #f8f9fa;
+  margin:0;
+  padding:0px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+
+}
+a.aboutLink{
+  color: #3665DB;
+  margin:0;
+  padding:0px;
+  padding-bottom:20px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+}
+img.ccimage{
+  width:80%;
+  padding:0px;
+  margin:0px;
+  margin-top:3px;
+  display:inline-block;
+}
+/******End Vertical header containing logo and logout link******/
+
+/*vertical header on left, main is the rest of the content to the right of header*/
+div.verticalHeader_block{
+  width: 15%;
+
+  height:98vh;
+  position:static;
+  display:inline-block;
+  float:left;
+  visibility:hidden;
+}
+main{
+  width: 80%;
+  margin:0px;
+  margin-right:1%;
+  margin-top:1%;
+  padding:0px;
+  position:static;
+  float:right;
+  display:inline-block;
+  background-color: #f8f9fa;
+  /*min-height: 800vh;*/
+}
+/*Container for content to the right of vertical header to enable reactive styling
+div.container{
+  width:100%;
+
+  min-height: 80vh;
+  padding:0px;
+  margin:0px;
+  background-color:grey;
+}*/
+
+/***********************************************/
+/****** BEGIN styling for user home page******/
+
+/****** BEGIN one giant card for user information******/
+div.userCard{
+  
+  width: 98%;
+  max-height:100vh;
+  height:100%;
+  margin-top: 0px;
+  margin-top:1%;
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+
+/*Top part of user's card*/
+div.userProfile{
+  display:inline-block;
+  position:static;
+  width:100%;
+  min-height: 30vh;
+  height:100%;
+  padding:0px;
+  margin:0px;
+  background-image: url("EdwinaBackground18.jpg");
+  background-size: 100%;
+  background-repeat:no-repeat;
+}
+h1.userWelcome{
+  margin:0px;
+  padding-top:50px;
+  padding-bottom:20px;
+  text-align:center;
+  font-size:350%;
+  color: #F0D022;
+ -webkit-text-fill-color: #F0D022;  /*Will override color (regardless of order) */
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #ddc01f;
+  text-shadow: 4px 4px 5px #c6c7c8;
+}
+
+/*Middle part of user's card*/
+div.currentLeagues{
+  width:100%;
+  margin-bottom:1%;
+  color: #112B6D;
+  border:none;
+  box-shadow: none;
+  display:inline-block;
+}
+h1.myLeagues_title{
+  width:100%;
+  margin:0;
+  padding:0;
+  padding-top:1%;
+  padding-bottom:1%;
+  background-color:#112B6D;
+  border-bottom: 1.5px solid #f8f9fa;
+  color: #f8f9fa;
+  text-align:center;
+  /*text-shadow: 3px 3px 4px #112B6D;*/
+  font-size: 180%;
+  font-weight:bold;
+}
+table.myLeagues{
+  /*border:2px solid #000000;*/
+  border-collapse:collapse;
+  width:100%;
+  margin:0;
+  padding:0;
+  font-size: 120%;
+  background-color:#112B6D;
+}
+
+th.myLeagues_categories{
+  width:25%;
+  padding:.7%;
+  padding-left:1%;
+  text-align:left;
+  border: none;
+  font-size:110%;
+  font-weight:bold;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 3px #c000000;
+  background-color:#112B6D;
+}
+tr.myLeagues_data{
+  border: none;
+  text-decoration:underline;
+  color: #f8f9fa;
+}
+tr.myLeagues_data:hover{
+  background-color:#0c1f4e;
+  cursor:pointer;
+}
+tr.myLeagues_data td{
+  width:25%;
+  padding:1%;
+}
+
+div.createLeague{
+  width:49.5%;
+  text-align:center;
+  display:inline-block;
+  margin:0;
+  padding-top:15px;
+  padding-bottom:15px;
+  float:left;
+  color: #3665DB;
+  text-decoration:underline;
+  border:2px solid #F0D022;
+  background-color:#f8f9fa;
+  font-weight:bold;
+  font-size:160%;
+
+}
+div.createLeague:hover{
+  /*text-shadow: 1px 1px 2px #000000;*/
+  box-shadow: -2px -2px 5px #2c313e inset,
+    1px 1px 2px #F0D022 inset;
+  text-shadow: .5px .5px 1px #000000;
+
+  cursor:pointer;
+}
+div.joinLeague{
+  
+  width:49.5%;
+  text-align:center;
+  display:inline-block;
+  margin:0;
+  padding-top:15px;
+  padding-bottom:15px;
+  float:right;
+  color: #3665DB;
+  text-decoration:underline;
+  border:2px solid #F0D022;
+  background-color:#f8f9fa;
+  font-weight:bold;
+  font-size:160%;
+}
+div.joinLeague:hover{
+  box-shadow: -2px -2px 5px #2c313e inset,
+    1px 1px 2px #F0D022 inset;
+  text-shadow: .5px .5px 1px #000000;
+
+  cursor:pointer;
+}
+
+
+/*****END styling for user info page*****/

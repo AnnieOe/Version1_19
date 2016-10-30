@@ -1,0 +1,385 @@
+/*File Name: linfostyle.css
+
+Version 1.0
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 10/25/2016 by Annie Oesterle
+*/
+
+/*    Design Notes:
+Main Blue: #112B6D
+Accent Blue: #3665DB
+Dark Grey Accent: #2c313e
+Light Grey Accent:#f8f9fa
+Orange:#fc850f
+Yellow: 
+#f0d023
+*/
+
+
+html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+
+  font-family: "Arial", Helvetica, sans-serif;
+
+  background-color: black;
+}
+body{
+  margin:0;
+  padding:0;
+}
+/******Begin Vertical header******/
+header{ 
+  margin:0;
+  margin-top:10px;
+  padding:0px;
+  width: 14%;
+  height: 95vh;
+  text-align:center;
+  vertical-align:top;
+  display: inline-block;
+  background-color: black;
+
+}
+/* div verticalHeader_top contains logo, logout and home links*/
+div.verticalHeader_top{
+  height:30%;
+}
+img.logo{
+  height:auto;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  text-align:center;
+  vertical-align:top;
+  display:inline-block;
+
+}
+p.homeLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:20px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.homeLink:hover{
+  cursor:pointer;
+}
+p.logoutLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:10px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.logoutLink:hover{
+  cursor:pointer;
+}
+
+/*middle spacer between logout links and general app info*/
+div.verticalHeader_spacer{
+  height:30%;
+}
+/*bottom div, contains general information about app*/
+div.verticalHeader_info{
+  color: #f8f9fa;
+  height:30%;
+  margin:0px;
+  padding:0px;
+  font-size:80%;
+  vertical-align:bottom;
+  text-align:center;
+  display:block;
+}
+a.license{
+  color: #f8f9fa;
+  margin:0;
+  padding:5px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+
+}
+a.aboutLink{
+  color: #3665DB;
+  margin:0;
+  padding:5px;
+  padding-bottom:20px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+}
+img.ccimage{
+  height:auto;
+  width:80%;
+  padding:2px;
+  margin:0px;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+}
+/******End Vertical header containing logo and logout link******/
+
+/*vertical header on left, main is the rest of the content to the right of header*/
+main{
+  width: 85%;
+  padding:0px;
+  margin:0px;
+  margin-top:4vh;
+  display:inline-block;
+  background-color: #000000;
+}
+/*Container for content to the right of vertical header to enable reactive styling*/
+div.container{
+  width:100%;
+
+  min-height: 85vh;
+  padding:0px;
+  margin:0px;
+}
+
+/***********************************************/
+/****** BEGIN styling for league info page******/
+
+/******BEGIN Top Left Card, List of Teams in League******/
+div.leagueList{
+    width: 30%;
+    padding:0px;
+    margin:0px;
+    vertical-align:top;
+
+    background-color:#112B6D;
+    display:inline-block;
+}
+table.theLeagueList{
+    width:100%;
+    padding:5px;
+    margin:0px;
+    border: 2px solid #f8f9fa;
+    text-align:center;
+    background-color:#f8f9fa;
+}
+tr.theLeagueName{
+    
+    width:100%;
+    padding:0px;
+    margin:0px;
+    
+    color: #3665DB;
+    font-size:160%;
+    font-weight:bold;
+    background-color:#f8f9fa;
+    
+    border-bottom: 1.5px solid #000000;
+
+}
+tr.theLeagueName td{
+    padding:10px;
+}
+
+tr.theLeagueTeams{
+    width:100%;
+    padding:0px;
+    margin:0px;
+    
+    text-decoration:underline;
+    color: #f8f9fa;
+    font-size:120%;
+    font-weight:bold;
+    background-color:#112B6D;
+    
+    border: 1.5px solid #000000;
+    
+}
+tr.theLeagueTeams td{
+    padding:10px;
+}
+tr.theLeagueTeams:hover{
+  background-color:#0c1f4e;
+  cursor:pointer;
+}
+
+/******END Top Left Card******/
+
+/*Spacer between top-left card and top-middle card*/
+div.spacerTLvTM{
+    width:1%;
+    display:inline-block;
+
+}
+
+/******BEGIN Top Middle Card, Information about selected team******/
+div.theTeam{
+    width: 30%;
+    padding:0px;
+    margin:0px;
+vertical-align:top;
+    background-color:#112B6D;
+    display:inline-block;
+}
+table.theTeam{
+    width:100%;
+    padding:5px;
+    margin:0px;
+    text-align:center;
+    background-color:#112B6D;
+}
+tr.theteamTitle{
+    color: #f8f9fa;
+    font-size:160%;
+    font-weight:bold;
+}
+tr.theteamTitle td{
+    padding:10px;
+    
+}
+tr.theTeamInfo{
+    color: #112B6D;
+    font-size:120%;
+    font-weight:bold;
+    text-align:center;
+    
+    background-color:#f8f9fa;
+}
+tr.theTeamInfo td{
+    padding:10px;
+    text-align:center;
+}
+tr.theTeamSpacer{
+  height:5px;
+  background-color:#112B6D;
+}
+tr.theTeamStatus td{
+    margin:0;
+    margin-top:10px;
+    padding:10px;
+    color: #3665DB;
+    text-decoration:underline;
+
+    border:3px solid #F0D022;
+    background-color:#f8f9fa;
+    font-weight:bold;
+    font-size:140%;
+}
+tr.theTeamStatus td:hover{
+    color: #3665DB;
+    box-shadow: -2px -2px 5px #2c313e inset,
+        1px 1px 2px #F0D022 inset;
+    text-shadow: 1px 1px 5px #ffffff;
+
+    border:3px solid #F0D022;
+    background-color:#f8f9fa;
+    font-weight:bold;
+    font-size:150%;
+    cursor:pointer;
+}
+/******END top-right card******/
+
+/*Spacer between top-middle card and top right card*/
+div.spacerTMvTR{
+    width:1%;
+    display:inline-block;
+
+}
+
+/******BEGIN Top-right card, Information on league rules******/
+div.leagueRules{
+    width:30%;
+    margin:0px;
+    padding:0px;
+    display:inline-block;
+    background-color:black;
+    border:2px solid white;
+    min-height:25vh;
+    vertical-align:top;
+}
+
+/******BEGIN Bottom Card, Information about players on the team******/
+div.theRoster{
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    margin-top:5vh;
+
+    background-color:#f8f9fa;
+    display:inline-block;
+}
+table.theRoster{
+  
+    width:100%;
+    padding:5px;
+    margin:0px;
+    text-align:center;
+    border-collapse:collapse;
+    background-color:#f8f9fa;
+    border:3px solid #f8f9fa;
+}
+tr.theRosterTitle{
+  
+    color: #112B6D;
+    /*text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;*/
+    font-size:180%;
+    font-weight:bold;
+    
+    background-color:#f8f9fa;
+
+}
+tr.theRosterTitle td{
+    padding:10px;
+    
+}
+tr.theRosterTitleA{
+  
+     color: #f8f9fa;
+    font-size:120%;
+    font-weight:bold;
+    text-align:left;
+    
+    background-color:#112B6D;
+
+}
+tr.theRosterTitleA td{
+    padding:10px;
+    
+}
+tr.activePlayers{
+   color: #f8f9fa;
+    font-size:100%;
+    text-decoration:underline;
+    
+    background-color:#112B6D;
+}
+tr.activePlayers td{
+    padding:10px;
+}
+tr.theRosterTitleB{
+   color: #f8f9fa;
+    font-size:120%;
+    font-weight:bold;
+    
+    text-align:left;
+    background-color:#2c313e;
+}
+tr.theRosterTitleB td{
+    padding:10px;
+}
+tr.benchPlayers{
+   color: #f8f9fa;
+    font-size:100%;
+    text-decoration:underline;
+    background-color:#2c313e;
+}
+tr.benchPlayers td{
+    padding:10px;
+}
+/******END Bottom Card******/

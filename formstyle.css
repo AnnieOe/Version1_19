@@ -1,0 +1,260 @@
+/*File Name: formstyle.css
+
+Version 1.0
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 10/25/2016 by Annie Oesterle
+*/
+
+/*    Design Notes:
+Main Blue: #112B6D
+Accent Blue: #3665DB
+Dark Grey Accent: #2c313e
+Light Grey Accent:#f8f9fa
+Orange:#fc850f
+Yellow: 
+#f0d023
+*/
+
+
+html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+
+  font-family: "Arial", Helvetica, sans-serif;
+
+  background-color: black;
+}
+body{
+  margin:0;
+  padding:0;
+}
+/******Begin Vertical header******/
+header{ 
+  margin:0;
+  margin-top:10px;
+  padding:0px;
+  width: 14%;
+  height: 95vh;
+  text-align:center;
+  vertical-align:top;
+  display: inline-block;
+  background-color: black;
+
+}
+/* div verticalHeader_top contains logo, logout and home links*/
+div.verticalHeader_top{
+  height:30%;
+}
+img.logo{
+  height:auto;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  text-align:center;
+  vertical-align:top;
+  display:inline-block;
+
+}
+p.homeLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:20px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.homeLink:hover{
+  cursor:pointer;
+}
+p.logoutLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:10px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.logoutLink:hover{
+  cursor:pointer;
+}
+
+/*middle spacer between logout links and general app info*/
+div.verticalHeader_spacer{
+  height:30%;
+}
+/*bottom div, contains general information about app*/
+div.verticalHeader_info{
+  color: #f8f9fa;
+  height:30%;
+  margin:0px;
+  padding:0px;
+  font-size:80%;
+  vertical-align:bottom;
+  text-align:center;
+  display:block;
+}
+a.license{
+  color: #f8f9fa;
+  margin:0;
+  padding:5px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+
+}
+a.aboutLink{
+  color: #3665DB;
+  margin:0;
+  padding:5px;
+  padding-bottom:20px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+}
+img.ccimage{
+  height:auto;
+  width:80%;
+  padding:2px;
+  margin:0px;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+}
+/******End Vertical header containing logo and logout link******/
+
+/*vertical header on left, main is the rest of the content to the right of header*/
+main{
+  width: 85%;
+  padding:0px;
+  margin:0px;
+  margin-top:4vh;
+  display:inline-block;
+  background-color: #000000;
+}
+/*Container for content to the right of vertical header to enable reactive styling*/
+div.container{
+  width:100%;
+
+  min-height: 85vh;
+  padding:0px;
+  margin:0px;
+}
+
+/***********************************************/
+/****** BEGIN styling for forms page******/
+form{
+  text-align:center;
+}
+h1.legend{
+  font-size:160%;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  padding:40px;
+  padding-top:10px;
+  padding-bottom:0px;
+  color: #3665DB;
+  font-weight:bold;
+  text-decoration:underline;
+  text-shadow: .5px .5px #112B6D;
+}
+li.formLabel{
+  padding-top:10px;
+}
+
+/*FIx Later, error messages change size of box??*/
+ul{
+  list-style: none;
+  text-align:left;
+  padding:0px;
+  margin-right:40px;
+  margin-left:40px;
+  display:inline-block;
+
+}
+li{
+  list-style: none;
+  text-align:left;
+  padding:0px;
+  margin:0px;
+}
+div.formCard{
+  padding:0px;
+  margin-left:10%;
+  margin-right:auto;
+  background-color:#f8f9fa;
+  font-size:100%;
+  color:#2c313e;
+  display:inline-block;
+}
+p.errorID{
+  margin-left:5px;
+  color:red;
+  display:inline;
+  padding:0px;
+  margin:0px;
+}
+
+p.errorMsg{
+  color:red;
+  display:inline;
+  padding:0px;
+  margin:0px;
+}
+li.buttonli{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+input.formButton{
+  box-shadow: -4px -4px 6px #112B6D inset,
+    1px 1px 2px #f8f9fa inset;
+  text-align:center;
+  width:40%;
+  padding:6px;
+  padding-left:14px;
+  padding-right:14px;
+  margin-top:5px;
+  margin-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#3665DB;
+  border:2px solid #2c313e;
+  color:#f8f9fa;
+  font-size:100%;
+}
+input.formButton:hover{
+  box-shadow: -3px -3px 4px #000000 inset,
+    0px 1px 3px #f0d023 inset, 1px 0px 3px #f8f9fa inset;
+  color:#ffffff;
+}
+button{
+  box-shadow: -4px -4px 6px #112B6D inset,
+    1px 1px 2px #f8f9fa inset;
+  text-align:center;
+  width:40%;
+  padding:6px;
+  padding-left:14px;
+  padding-right:14px;
+  margin-top:5px;
+  margin-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#3665DB;
+  border:2px solid #2c313e;
+  color:#f8f9fa;
+  font-size:100%;
+}
+button:hover{
+  box-shadow: -3px -3px 4px #000000 inset,
+    0px 1px 3px #f0d023 inset, 1px 0px 3px #f8f9fa inset;
+  color:#ffffff;
+}

@@ -1,0 +1,470 @@
+/* File Name: cssStyle.css
+
+Version 1_8
+CSC 478 Group Project
+Group: FanSports
+Wesley Elliot, Jeremy Jones, Ann Oesterle
+Last Updated: 9/30/2016
+
+*/
+
+/*    Design Notes:
+Main Blue: #112B6D
+Accent Blue: #3665DB
+Dark Grey Accent: #2c313e
+Light Grey Accent:#f8f9fa
+Orange:#fc850f
+Yellow: 
+#f0d023
+#F0D022
+*/
+
+/*
+font-family: 'Baloo Bhai', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+*/
+
+html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+
+  font-family: "Arial", Helvetica, sans-serif;
+
+  background-color: black;
+}
+body{
+  margin:0;
+  padding:0;
+}
+/******Begin Vertical header containing logo and logout link******/
+header{ 
+  margin:0;
+  margin-top:10px;
+  padding:0px;
+  width: 14%;
+  height: 95vh;
+  text-align:center;
+  vertical-align:top;
+  display: inline-block;
+  background-color: black;
+
+}
+/* div topApp contains logo, logout and home links*/
+div.apptop{
+  height:30%;
+}
+img.logo{
+  height:auto;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  text-align:center;
+  vertical-align:top;
+  display:inline-block;
+
+}
+p.homeLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:20px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+p.logoutLink{
+  color: #f8f9fa;
+  margin:0;
+  padding-top:10px;
+  font-size:110%;
+  text-align:center;
+  text-decoration:underline;
+  display:block;
+
+}
+
+/*middle spacer between logout links and general app info*/
+div.appspacer{
+  height:30%;
+}
+/*bottom div, contains general information about app*/
+div.appinfo{
+  color: #f8f9fa;
+  height:30%;
+  margin:0px;
+  padding:0px;
+  font-size:80%;
+  vertical-align:bottom;
+  text-align:center;
+  display:block;
+}
+a.license{
+  color: #f8f9fa;
+  margin:0;
+  padding:5px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+
+}
+a.aboutLink{
+  color: #3665DB;
+  margin:0;
+  padding:5px;
+  padding-bottom:20px;
+  font-size:100%;
+  text-align:center;
+  display:block;
+}
+img.ccimage{
+  height:auto;
+  width:80%;
+  padding:2px;
+  margin:0px;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+}
+/******End Vertical header containing logo and logout link******/
+
+/*vertical header on left, main is the rest of the content to the right of header*/
+main{
+  width: 85%;
+  padding:0px;
+  margin:0px;
+  margin-top:4vh;
+  display:inline-block;
+  background-color: #000000;
+}
+/*Container for content to the right of vertical header to enable reactive styling*/
+div.container{
+  width:100%;
+
+  min-height: 85vh;
+  padding:0px;
+  margin:0px;
+}
+
+/***********************************************/
+/****** BEGIN styling for draft page******/
+
+/*Top Card, main information about draft*/
+div.topDraft{
+  width: 99%;
+  padding:5px;
+  margin-top: 0px;
+  margin-bottom:10px;
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+  background-color: #f8f9fa;
+}
+h1.draftHeading{
+  width:65%;
+  margin:0px;
+  margin-top:5%;
+  padding:0px;
+  vertical-align:top;
+  text-align:center;
+  font-size:250%;
+  color: #F0D022;
+  -webkit-text-fill-color: #F0D022; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #ddc01f;
+  text-shadow: 4px 4px 5px #c6c7c8;
+  display:inline-block;
+}
+/*inside top card, information about draft rules*/
+table.draftRules{
+  width: 33.5%;
+  color:#f8f9fa;
+  padding:0px;
+  margin:0px;
+  display:inline-block;
+  background-color: #3665DB;
+
+}
+tr.draftRules{
+  padding:0px;
+  margin:0px;
+  margin-top:3px;
+  width:100%;
+  display:inline-block;
+}
+td.draftRules{
+  padding:3px;
+  margin:0px;
+  width:100%;
+  display:inline-block;
+}
+tr.dRulesTitle{
+  padding:0px;
+  margin:0px;
+  width:100%;
+  display:inline-block;
+}
+td.dRulesTitle{
+  padding:10px;
+  margin:0px;
+  color:#f8f9fa;
+  width:100%;
+  font-size:120%;
+  text-align:center;
+  font-weight:bold;
+  border-bottom:1px solid white;
+  display:inline-block;
+}
+tr.dMoreInfo{
+  text-decoration:underline;
+  text-align:center;
+}
+td.dMoreInfo{
+  text-decoration:underline;
+  text-align:center;
+}
+/*inside top card, table that allows you to actually draft a player*/
+table.selectedPlayer{
+  width: 98%;
+  height:100%;
+  color:#f8f9fa;
+  padding:0px;
+  margin:0px;
+  margin-right:auto;
+  margin-left:auto;
+  border-collapse:collapse;
+  /*display:inline-block;*/
+  background-color: #112B6D;
+  border:2px solid black;
+}
+/*Header that says "Select a Player"*/
+tr.draftTeamHeader{
+  padding:0px;
+  color:#3665DB;
+  margin:0px;
+  font-size:140%;
+  font-weight:bold;
+  text-align:center;
+  width:100%;
+  
+  background-color:#f8f9fa;
+}
+tr.draftTeamHeader td{
+  padding:10px;
+}
+/*Column labels*/
+/*tr.selectedPlayerTitle{
+  padding:0px;
+  margin:0px;
+  color:#112B6D;
+  width:100%;
+  font-size:120%;
+  font-weight:bold;
+  background-color:#f8f9fa;
+
+}*/
+/*Selected player(for draft) information*/
+/*tr.selectedPlayerTitle td{
+  padding:5px;
+  border-bottom: 1px solid white;
+}*/
+
+tr.selectedPlayer{
+  padding:0px;
+  margin:0px;
+  width:100%;
+  background-color: #112B6D;
+
+}
+td.selectedPlayer{
+ padding-left:10px;
+  margin:0px;
+  width:30%;
+}
+td.selectedPlayerPos{
+ padding-left:10px;
+  margin:0px;
+  width:9%;
+}
+/*link to get more detailed information about a player*/
+td.dPlayerMore{
+  width:40%;
+  padding-left:10px;
+  margin:0px;
+  text-decoration:underline;
+}
+/*button to actually draft a listed player*/
+td.draftButton{
+  width:90%;
+  margin:2px;
+  margin-right:auto;
+  margin-left:auto;
+  padding:10px;
+  color: #3665DB;
+  text-align:center;
+  border:2px solid #F0D022;
+  background-color:#f8f9fa;
+  display:inline-block;
+  font-weight:bold;
+  font-size:140%;
+}
+td.draftButton:hover{
+  width:90%;
+  margin:2px;
+  margin-right:auto;
+  margin-left:auto;
+  padding:10px;
+  color: #3665DB;
+  box-shadow: -2px -2px 5px #2c313e inset,
+    1px 1px 2px #F0D022 inset;
+  text-shadow: 1px 1px 5px #ffffff;
+
+  text-align:center;
+  border:2px solid #F0D022;
+  background-color:#f8f9fa;
+  font-weight:bold;
+  font-size:150%;
+}
+/****END top Card, main information about draft****/
+
+/****** BEGIN bottom-left card with available players to select******/
+div.availablePlayers{
+  width: 63.5%;
+  vertical-align:top;
+  padding:15px;
+  margin-top: 5px;
+  display:inline-block;
+  background-color: #f8f9fa;
+}
+h1.avPlayerTitle{
+  color: #112B6D;
+  font-size: 180%;
+  font-weight:bold;
+  margin:7px;
+  padding:0px;
+  text-align:center;
+}
+/*This table allows you to search/list players by position*/
+table.selectPos{
+  border-collapse:collapse;
+
+  color:#f8f9fa;
+  width:100%;
+  margin:0;
+  margin-bottom:0px;
+  padding:0px;
+  font-size: 120%;
+  background-color:#2c313e;
+  display:inline-block;
+}
+table.selectPos tr{
+  padding:0px;
+  margin:0px;
+}
+table.selectPos td{
+  border:2px solid #3665DB;
+  background-color:#2c313e;
+  padding:10px;
+  padding-left:20px;
+  padding-right:20px;
+  margin:0px;
+}
+table.selectPos td.endBlank{
+  border:2px solid #f8f9fa;
+  width:100%;
+  background-color:#f8f9fa;
+  padding:0px;
+  margin:0px;
+}
+
+/*This is where the players are listed based on the position selected in above table*/
+table.avPlayerList{
+  border-collapse:collapse;
+  width:100%;
+  margin-top:-5px;
+  padding:0;
+  font-size: 100%;
+  background-color:#112B6D;
+}
+table.avPlayerList td{
+  padding:7px;
+}
+input.playerCheckbox{
+  margin:0px;
+  padding:0px;
+  color:white;
+}
+/*Column labels for categories of available player list*/
+tr.draftCategories{
+  margin:0;
+  padding:0;
+  font-size:120%;
+  border-bottom:2px solid #3665DB;
+  font-weight:bold;
+  color: #f8f9fa;
+  background-color:#112B6D;
+}
+tr.draftPlayers{
+  margin:0;
+  padding:0;
+  border: none;
+  color: #f8f9fa;
+  font-size:100%;
+}
+/****** End bottom left card******/
+
+/****** BEGIN bottom right card with already chosen players******/
+div.myPlayers{
+  vertical-align:top;
+  width: 30%;
+  padding:15px;
+  margin-top: 5px;
+  margin-left:1%;
+  display:inline-block;
+  background-color: #112B6D;
+}
+table.myPlayers{
+  border-collapse:collapse;
+  width:100%;
+  margin:0;
+  padding:0;
+  font-size: 120%;
+  background-color:#f8f9fa;
+}
+/*label for card*/
+tr.myRosterTitle{
+  color: #f8f9fa;
+  font-size: 140%;
+  margin:7px;
+  padding:0px;
+  font-weight:bold;
+  text-align:center;
+  background-color: #112B6D;
+}
+tr.myRosterTitle td{
+  padding:7px;
+
+}
+/*column categories*/
+tr.myRosterCategories{
+  font-size:120%;
+  border-bottom:2px solid #3665DB;
+  font-weight:bold;
+  color: #112B6D;
+  background-color:#f8f9fa;
+}
+tr.myRosterPlayers{
+  border: none;
+  color: #112B6D;
+  font-size:100%;
+}
+tr.myRosterPlayers:hover{
+  background-color:#0c1f4e;
+}
+/****** END bottom right card with already chosen players******/
+

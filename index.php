@@ -1,10 +1,10 @@
 <!--File Name: index.php
 
-Version 1_18
+Version 1.0
 CSC 478 Group Project
 Group: FanSports
 Wesley Elliot, Jeremy Jones, Ann Oesterle
-Last Updated: 10/15/2016
+Last Updated: 10/25/2016 by Annie Oesterle
 
 -->
 <!doctype html>
@@ -13,12 +13,7 @@ Last Updated: 10/15/2016
 <head>
     <meta charset="utf-8">
         <title>Welcome to FanSports</title>
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
         <link rel="stylesheet" href="css/welcomestyle.css">
-            <style>
-            </style>
 </head>
 <body>
     <img class = "logo" src ="pictures/logo3.jpg">
